@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #3f3f3f;
 }
 
 a {
@@ -13,4 +14,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.tabuleiro-pagina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 1px;
+}
+
+@media (min-width: 800px) {
+  .tabuleiro {
+    width: 800px;
+    height: 800px;
+  }
 }
